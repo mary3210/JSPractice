@@ -65,11 +65,11 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -124,27 +124,46 @@ const currencies = new Map([
 
 // console.log('jonas'.at(0))
 // console.log('jonas'.at(-1))
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-for (const [i, movement] of movements.entries()) {
-  if (movement > 0) {
-    console.log(`Movement ${i + 1}: You deposited ${movement}`);
-  } else {
-    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
-  }
-}
+// for (const [i, movement] of movements.entries()) {
+//   if (movement > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${movement}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+//   }
+// }
 
-//continue and break statements dont work in a foreach, will always loop the entire array
-console.log('------ FOREACH ------')
-movements.forEach(function (mov, i, arr) {
-  if (mov > 0) {
-    console.log(`Movement ${i + 1}: You deposited ${mov}`);
-  } else {
-    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
-  }
-});
+// //continue and break statements dont work in a foreach, will always loop the entire array
+// console.log('------ FOREACH ------')
+// movements.forEach(function (mov, i, arr) {
+//   if (mov > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${mov}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+//   }
+// });
 
 // 0: function(200)
 // 1: function(450)
 // 2: function(400)
 // ...
+
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+//foreach on map is same as calling it on an array
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`)
+})
+
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR'])
+console.log(currenciesUnique)
+
+//sets do not have keys or indexes. thats why first and second arguement are the same.
+currenciesUnique.forEach(function (value, _value, map) {
+  console.log(`${_value}: ${value}`);
+});
