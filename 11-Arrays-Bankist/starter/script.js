@@ -253,6 +253,12 @@ accs.forEach(function(acc) {
 
 createUsernames(accounts)
   console.log(accounts)
+
+  const calcDisplayBalance = function(movements){
+    const balance = movements.reduce((acc, mov) => acc + mov, 0);
+    labelBalance.textContent = `${balance} EUR`
+  };
+  calcDisplayBalance(account1.movements);
 // console.log(createUsernames('Steven Thomas Williams')); //ssw
 
 const deposits = movements.filter(function (mov) {
@@ -271,3 +277,24 @@ console.log(withdrawals)
 const withdrawalsFor = []
 for( const mov of movements) if (mov < 0) withdrawals.push(mov);
 console.log(withdrawals)
+
+
+//accumulator -> SNOWBALL
+const balance = movements.reduce((acc, curr) =>
+ acc + curr, 0);
+
+console.log(balance);
+
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2)
+
+//Maximum value
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov )
+   return acc; 
+  else{
+    return mov
+  }}, movements[0])
+
+  console.log(max)
