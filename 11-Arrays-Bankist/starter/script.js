@@ -332,26 +332,64 @@ const max = movements.reduce((acc, mov) => {
 // console.log(avgDogs / adultDogs.length)
 
 
-function dogs(arr){
-    const humanage = arr.map((curr, i) => {
-      if (curr <= 2){
-          return 2 * curr
-      } 
-      else { 
-          return 16 + curr * 4
-      }
-    })
-    const adultDogs = humanage.filter(function(curr){
-      return curr > 18
-    })  
-    console.log(humanage)
-    console.log(adultDogs)
-    const avgDogs = adultDogs.reduce(function(acc, curr){
-        return acc + curr
-    }, 0)/adultDogs.length;
+// function dogs(arr){
+//     const humanage = arr.map((curr, i) => {
+//       if (curr <= 2){
+//           return 2 * curr
+//       } 
+//       else { 
+//           return 16 + curr * 4
+//       }
+//     })
+//     const adultDogs = humanage.filter(function(curr){
+//       return curr > 18
+//     })  
+//     console.log(humanage)
+//     console.log(adultDogs)
+//     const avgDogs = adultDogs.reduce(function(acc, curr){
+//         return acc + curr
+//     }, 0)/adultDogs.length;
 
       
-    return avgDogs
-}
+//     return avgDogs
+// }
 
-console.log(dogs(dogarr))
+// console.log(dogs(dogarr))
+
+const eurToUsd2 = 1.1;
+
+//pipeline
+const totalDepositsUSD = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * eurToUsd2)
+  .reduce((acc, mov) => acc + mov, 0)
+
+  console.log(totalDepositsUSD)
+
+
+
+
+  const calcDisplaySummary = function(movements){
+    const incomes = movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov)=> acc + mov, 0);
+    labelSumIn.textContent = `${incomes}💲`
+
+    const out = movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov )=> acc + mov, 0);
+    labelSumOut.textContent = `${Math.abs(out)}💲`
+
+    const interest = movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * 1.2) / 100)
+    .filter((int, i, arr) => {
+        console.log(arr);
+        return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+    labelSumInterest.textContent = `${interest}💲`;
+  }
+   
+
+  calcDisplaySummary(account1.movements);
