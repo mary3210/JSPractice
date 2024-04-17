@@ -255,3 +255,19 @@ createUsernames(accounts)
   console.log(accounts)
 // console.log(createUsernames('Steven Thomas Williams')); //ssw
 
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+})
+console.log(movements);
+
+const depositsFor = [];
+for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+console.log(depositsFor)
+
+const withdrawals = movements.filter(function (mov){
+  return mov < 0
+})
+console.log(withdrawals)
+const withdrawalsFor = []
+for( const mov of movements) if (mov < 0) withdrawals.push(mov);
+console.log(withdrawals)
