@@ -298,3 +298,60 @@ const max = movements.reduce((acc, mov) => {
   }}, movements[0])
 
   console.log(max)
+
+  const dogarr = [5, 2, 4, 1, 15, 8, 3]
+
+  // const humanyears = dogarr.reduce(function(acc, curr){
+  //   if (curr <= 2 ){
+      
+  //   }
+  // })
+//   const humanage = dogarr.map((curr, i) => {
+//     if (curr <= 2){
+//       // console.log(2 * curr)
+//       return 2 * curr
+//     } 
+//     else {
+//       // console.log(16 + curr * 4)
+//       return 16 + curr * 4
+//     }
+//   })
+
+// console.log(humanage)
+
+//   const adultDogs = humanage.filter(function(curr){
+// return curr > 18
+//   })
+
+// console.log(adultDogs)
+
+// const avgDogs = adultDogs.reduce(function(acc, curr){
+//   return acc + curr
+// }, 0)
+
+// console.log(avgDogs / adultDogs.length)
+
+
+function dogs(arr){
+    const humanage = arr.map((curr, i) => {
+      if (curr <= 2){
+          return 2 * curr
+      } 
+      else { 
+          return 16 + curr * 4
+      }
+    })
+    const adultDogs = humanage.filter(function(curr){
+      return curr > 18
+    })  
+    console.log(humanage)
+    console.log(adultDogs)
+    const avgDogs = adultDogs.reduce(function(acc, curr){
+        return acc + curr
+    }, 0)/adultDogs.length;
+
+      
+    return avgDogs
+}
+
+console.log(dogs(dogarr))
