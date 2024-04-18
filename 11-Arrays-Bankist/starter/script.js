@@ -400,3 +400,24 @@ const totalDepositsUSD = movements
    
 
   calcDisplaySummary(account1.movements);
+
+  const firstWithdrawal = movements.find(mov => mov < 0)
+
+  console.log(movements)
+  console.log(firstWithdrawal);
+  console.log(accounts);
+
+
+const account = accounts. find(acc => acc.owner === 'Jessica Davis');
+console.log(account)
+
+function foraccount(accounts){
+for (const acc of accounts){
+    if (acc.owner ='Jessica Davis'){
+        console.log(acc)
+        return acc
+    }
+}
+}
+
+foraccount(accounts)
