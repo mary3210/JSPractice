@@ -332,29 +332,36 @@ const max = movements.reduce((acc, mov) => {
 // console.log(avgDogs / adultDogs.length)
 
 
-// function dogs(arr){
-//     const humanage = arr.map((curr, i) => {
-//       if (curr <= 2){
-//           return 2 * curr
-//       } 
-//       else { 
-//           return 16 + curr * 4
-//       }
-//     })
-//     const adultDogs = humanage.filter(function(curr){
-//       return curr > 18
-//     })  
-//     console.log(humanage)
-//     console.log(adultDogs)
-//     const avgDogs = adultDogs.reduce(function(acc, curr){
-//         return acc + curr
-//     }, 0)/adultDogs.length;
+function dogs(arr){
+    const humanage = arr.map((curr, i) => {
+      if (curr <= 2){
+          return 2 * curr
+      } 
+      else { 
+          return 16 + curr * 4
+      }
+    })
+    const adultDogs = humanage.filter(function(curr){
+      return curr > 18
+    })  
+    console.log(humanage)
+    console.log(adultDogs)
+    const avgDogs = adultDogs.reduce(function(acc, curr){
+        return acc + curr
+    }, 0)/adultDogs.length;
 
       
-//     return avgDogs
-// }
+    return avgDogs
+}
 
-// console.log(dogs(dogarr))
+function calcAverageHumanAge(age){
+    const ages = age.map((cur, i)=> cur <= 2 ? 2 * cur : 16 + cur * 4)
+    .filter(cur => cur > 18)
+    .reduce((acc, cur, i , arr ) => acc + cur /arr.length,0);
+
+}
+console.log(calcAverageHumanAge(dogarr))
+console.log(dogs(dogarr))
 
 const eurToUsd2 = 1.1;
 
