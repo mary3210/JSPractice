@@ -65,23 +65,23 @@ const inputClosePin = document.querySelector('.form__input--pin');
 const displayMovements = function (movements, sort = false) {
     containerMovements.innerHTML = '';
 
-    const movs = sort ? movements.slice().sort((a, b) => a-b ) : movements;
+    const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
-        movs.forEach(function (mov, i) {
-            const type = mov > 0 ? 'deposit' : 'withdrawal'
+    movs.forEach(function (mov, i) {
+        const type = mov > 0 ? 'deposit' : 'withdrawal'
 
-            const html = ` 
+        const html = ` 
     <div class="movements__row">
           <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
           <div class="movements__value">${mov}</div></div>
         </div> 
     `
-            containerMovements.insertAdjacentHTML('afterbegin', html);
-        });
+        containerMovements.insertAdjacentHTML('afterbegin', html);
+    });
 };
 
 let sorted = false;
-btnSort.addEventListener('click', function(e){
+btnSort.addEventListener('click', function (e) {
     e.preventDefault();
 
     displayMovements(currentAccount.movements, !sorted)
@@ -630,20 +630,66 @@ arri.fill(23, 4, 6)
 console.log(arr)
 
 //array.from
-const y = Array.from({length: 7}, () => 1);
+const y = Array.from({ length: 7 }, () => 1);
 console.log(y)
 
-const z = Array.from({length: 7}, ( _, i) => i + 1);
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z)
 
 
 
-labelBalance.addEventListener('click', function(){
+labelBalance.addEventListener('click', function () {
     console.log(document.querySelectorAll('.movements__value'))
     const movementsUI = Array.from(
-    document.querySelectorAll('.movements__value'),el => Number(el.textContent.replace('💲', ''))
+        document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('💲', ''))
     );
     console.log(movementsUI);
 
 });
 
+//1.
+const bankDepositSum = accounts.flatMap(acc => acc.movements).filter(mov => mov > 0).reduce((sum, cur) => sum + cur, 0)
+
+console.log(bankDepositSum)
+
+//2.
+
+// const numDeposits1000 = accounts.flatMap(acc => acc.movements).filter(mov => mov >= 1000).length;
+
+const numDeposits1000 = accounts.flatMap(acc => acc.movements).reduce((count, cur) => cur >= 1000 ? ++count : count, 0);
+console.log(numDeposits1000)
+
+
+// Prefixed ++ operator
+let a = 10;
+console.log(++a);
+console.log(a)
+
+//3.
+
+const {deposits2, withdrawals2} = accounts
+.flatMap(acc => acc.movements).reduce((sums, cur) =>{
+// cur > 0 ? sums.deposits2 += cur : sums.withdrawals2 += cur; 
+sums[cur > 0 ? 'deposits': 'withrawals'] += cur;
+return sums;
+}, {deposits2: 0, withdrawals2: 0});
+
+console.log(deposits2, withdrawals2)
+
+//4.
+
+//this is a nice title -> This Is a Nice Title
+const convertTitleCase = function(title){
+    const capitalize = str => str[0].toUpperCase() + str.slice(1);
+
+    const expections = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with', 'and'];
+
+    const titleCase = title.toLowerCase()
+    .split(' ')
+    .map(word => expections.includes(word) ? word : word[0].toUpperCase() + word.slice(1)).join(' ');
+    return capitalize(titleCase);
+}
+console.log(convertTitleCase('this is a nice title'));
+
+console.log(convertTitleCase('this is a LONG title but not too long'));
+console.log(convertTitleCase('and here is another title with an Example'));
