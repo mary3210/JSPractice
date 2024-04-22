@@ -353,36 +353,36 @@ const dogarr = [5, 2, 4, 1, 15, 8, 3]
 // console.log(avgDogs / adultDogs.length)
 
 
-function dogs(arr) {
-    const humanage = arr.map((curr, i) => {
-        if (curr <= 2) {
-            return 2 * curr
-        }
-        else {
-            return 16 + curr * 4
-        }
-    })
-    const adultDogs = humanage.filter(function (curr) {
-        return curr > 18
-    })
-    console.log(humanage)
-    console.log(adultDogs)
-    const avgDogs = adultDogs.reduce(function (acc, curr) {
-        return acc + curr
-    }, 0) / adultDogs.length;
+// function dogs(arr) {
+//     const humanage = arr.map((curr, i) => {
+//         if (curr <= 2) {
+//             return 2 * curr
+//         }
+//         else {
+//             return 16 + curr * 4
+//         }
+//     })
+//     const adultDogs = humanage.filter(function (curr) {
+//         return curr > 18
+//     })
+//     console.log(humanage)
+//     console.log(adultDogs)
+//     const avgDogs = adultDogs.reduce(function (acc, curr) {
+//         return acc + curr
+//     }, 0) / adultDogs.length;
 
 
-    return avgDogs
-}
+//     return avgDogs
+// }
 
-function calcAverageHumanAge(age) {
-    const ages = age.map((cur, i) => cur <= 2 ? 2 * cur : 16 + cur * 4)
-        .filter(cur => cur > 18)
-        .reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+// function calcAverageHumanAge(age) {
+//     const ages = age.map((cur, i) => cur <= 2 ? 2 * cur : 16 + cur * 4)
+//         .filter(cur => cur > 18)
+//         .reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-}
-console.log(calcAverageHumanAge(dogarr))
-console.log(dogs(dogarr))
+// }
+// console.log(calcAverageHumanAge(dogarr))
+// console.log(dogs(dogarr))
 
 const eurToUsd2 = 1.1;
 
@@ -693,3 +693,53 @@ console.log(convertTitleCase('this is a nice title'));
 
 console.log(convertTitleCase('this is a LONG title but not too long'));
 console.log(convertTitleCase('and here is another title with an Example'));
+
+const dogs = [
+    { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+    { weight: 8, curFood: 200, owners: ['Matilda'] },
+    { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+    { weight: 32, curFood: 340, owners: ['Michael'] }
+  ];
+
+//   const formula = dogs.forEach(doggofunction)
+
+//1
+  dogs.forEach(doggofunction)
+  function doggofunction(doggo){
+    return doggo.maintenance = (Number(doggo.weight) ** 0.75 * 28)
+  }
+console.log(dogs)
+//   console.log(formula)
+
+//2
+let sarahsdog;
+dogs.forEach((el) => {
+    if((el.owners).find(sarah))
+{
+    console.log(el)
+ return sarahsdog = el
+}})
+  
+ console.log(sarahsdog)
+if (sarahsdog.curfood < sarahsdog.maintenance){
+    console.log('wow he eaten not enough, no wonder he looks anorexic')
+} else if(sarahsdog.curfood == sarahsdog.maintenance){
+    console.log('Yeah he is eating the perfect healthy amount')
+}
+else {
+    console.log('mmm he been eating tooo gooood')
+}
+
+function sarah(ownersarray){
+   
+    
+if(ownersarray === 'Sarah'){
+    return true
+}
+
+}
+
+
+function foodamt(dogs){
+    
+}
