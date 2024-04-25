@@ -355,3 +355,20 @@ const PI = 3.1415;
 console.log(PI);
 
 console.log(Number('230000'));
+
+/////////////////////////////////////////////////////////////////
+
+console.log(2 ** 53 -1 )
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(42134124312432434532543254353453534n)
+console.log(BigInt(42134124312432434532543254353453534n))
+
+//Operations
+console.log(1000n + 1000n)
+
+console.log(d)
