@@ -114,8 +114,8 @@ console.log(link.getAttribute('href'));
 console.log(logo.dataset.versionNumber);
 
 //Classes 
-logo.classList.add('c','j');
-logo.classList.remove('c','j');
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
 logo.classList.contains('c');
 
@@ -126,7 +126,7 @@ logo.className = 'jonas'
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 console.log(btnScrollTo)
-btnScrollTo.addEventListener('click', function(e){
+btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
   console.log(s1coords);
   // console.log(e.target.getBoundingClientRect());
@@ -138,7 +138,7 @@ btnScrollTo.addEventListener('click', function(e){
   //   document.documentElement.clientHeight,
   //   document.documentElement.clientWidth
   // )
-  
+
   // section1.scrollIntoView({ behavior: 'smooth'})
 })
 
@@ -158,7 +158,7 @@ btnScrollTo.addEventListener('click', function(e){
 
 ///rgb(255,255,255)
 // , e.target, e.currentTarget);
-const randomInt = (min,max)=> Math.floor(Math.random() * (max - min +1) + min)
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 
 // const randomColor = () => `rgb(${randomInt(0, 255)},${randomInt(0, 255)}, ${randomInt(0, 255)})`;
 
@@ -196,19 +196,19 @@ const randomInt = (min,max)=> Math.floor(Math.random() * (max - min +1) + min)
 // 1.Add event listener to common parent element
 //2. Determin what element originated the event
 
-document.querySelector('.nav__links').addEventListener
-('click', function(e){
-    console.log(e.target);
+// document.querySelector('.nav__links').addEventListener
+// ('click', function(e){
+//     console.log(e.target);
 
-    //Matching strategy
-    if(e.target.classList.contains('nav__link')){
-        const id = this.getAttribute('href');
-        console.log(id)
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth'
-        })
-    }
-})
+//     //Matching strategy
+//     if(e.target.classList.contains('nav__link')){
+//         const id = this.getAttribute('href');
+//         console.log(id)
+//         document.querySelector(id).scrollIntoView({
+//             behavior: 'smooth'
+//         })
+//     }
+// })
 
 
 
@@ -236,8 +236,8 @@ console.log(h1.nextElementSibling);
 
 console.log(h1.parentElement.children);
 
-[...h1.parentElement.children].forEach(function(el) {
-    if (el !== h1) el.style.transform = 'scale(0.5)';
+[...h1.parentElement.children].forEach(function (el) {
+  if (el !== h1) el.style.transform = 'scale(0.5)';
 });
 
 ///////////////////////////////////////////////////////////////////////////
@@ -246,23 +246,53 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
-tabsContainer.addEventListener('click', function(e){
-    const clicked = e.target.closest('.operations__tab');
-    console.log(clicked)
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+  console.log(clicked)
 
-//Guard clause
-if(!clicked) return;
+  //Guard clause
+  if (!clicked) return;
 
 
-//active tabs
-tabs.forEach(t => t.classList.remove('operations__tab--active'));
-clicked.classList.add('operations__tab--active');
+  //active tabs
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  clicked.classList.add('operations__tab--active');
 
-console.log(clicked)
-console.log(clicked.dataset)
-console.log(clicked.dataset.potato)
-//activate content area
-document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add();
+  console.log(clicked)
+  console.log(clicked.dataset)
+  console.log(clicked.dataset.potato)
+  //activate content area
+  document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations_content--active');
 
 });
 
+
+//Menu Fade animation
+const handleHover = function (e) {
+  console.log(this)
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    console.log(` link ${link}`)
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    console.log(siblings)
+    const logo = link.closest('.nav').querySelector('img')
+
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+}
+
+
+const nav = document.querySelector('.nav')
+console.log(nav)
+nav.addEventListener('mouseover', handleHover.bind(0.5))
+
+
+nav.addEventListener('mouseout', handleHover.bind({opcaity:1, color: red}))
+
+
+nav.addEventListener('mouseout', function(e){
+  handleHover(e, 0.5);
+})
