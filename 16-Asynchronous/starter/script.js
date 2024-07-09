@@ -3,7 +3,7 @@
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
-///////////////////////////////////////
+// ///////////////////////////////////////
 
 const renderCountry = function (data, className = '') {
     // const language = Object.values(data.languages)[0]
@@ -70,49 +70,49 @@ const renderError = function (msg) {
 // const request = fetch('https://restcountries.com/v3.1/name/portugal')
 // console.log(request);
 
-const getJSON = function (url, errorMsg = 'Something went wrong') {
-    return fetch(url).then(response => {
-        if (!response.ok)
-            throw new Error(`Country not found (${response.status})`);
-        console.log(response)
-        return response.json()
-    })
-}
+// const getJSON = function (url, errorMsg = 'Something went wrong') {
+//     return fetch(url).then(response => {
+//         if (!response.ok)
+//             throw new Error(`Country not found (${response.status})`);
+//         console.log(response)
+//         return response.json()
+//     })
+// }
 
-const getCountryData = function (country) {
-    //country 1
-    getJSON(`https://restcountries.com/v3.1/name/${country}`, 'Country not found')
-        .then(data => {
-            console.log(data[0]);
-            renderCountry(data[0]);
+// const getCountryData = function (country) {
+//     //country 1
+//     getJSON(`https://restcountries.com/v3.1/name/${country}`, 'Country not found')
+//         .then(data => {
+//             console.log(data[0]);
+//             renderCountry(data[0]);
 
-            if (!data[0]?.borders) { throw new Error('No neighbor found!') };
-            const neighbor = data[0].borders[0];
-            console.log(neighbor)
-            // const neighbor = 'dfas'
+//             if (!data[0]?.borders) { throw new Error('No neighbor found!') };
+//             const neighbor = data[0].borders[0];
+//             console.log(neighbor)
+//             // const neighbor = 'dfas'
 
-            // if (!neighbor) {throw new Error('No neighbor found!')};
-            // const neighbor = data[0].borders[0]
-            console.log(neighbor)
+//             // if (!neighbor) {throw new Error('No neighbor found!')};
+//             // const neighbor = data[0].borders[0]
+//             console.log(neighbor)
 
-            // Country 2
-            return getJSON(
-                `https://restcountries.com/v3.1/alpha/${neighbor}`, 'Country not found');
-        })
-        .then(data => renderCountry(data[0], 'neighbor'))
-        .catch(err => {
-            console.error(`${err} 🥰`);
-            renderError(`Something went wrong 🥰🥰 ${err.message}. Try again!`);
-        })
-        .finally(() => {
-            countriesContainer.style.opacity = 1;
-        })
-};
+//             // Country 2
+//             return getJSON(
+//                 `https://restcountries.com/v3.1/alpha/${neighbor}`, 'Country not found');
+//         })
+//         .then(data => renderCountry(data[0], 'neighbor'))
+//         .catch(err => {
+//             console.error(`${err} 🥰`);
+//             renderError(`Something went wrong 🥰🥰 ${err.message}. Try again!`);
+//         })
+//         .finally(() => {
+//             countriesContainer.style.opacity = 1;
+//         })
+// };
 
 
-btn.addEventListener('click', function () {
-    getCountryData('portugal')
-})
+// btn.addEventListener('click', function () {
+//     getCountryData('portugal')
+// })
 
 // getCountryData('australia')
 
@@ -165,36 +165,210 @@ GOOD LUCK 😀
 
 
 
-console.log('Test start');
-setTimeout(() => console.log('0 sec timer'), 0);
-Promise.resolve('Resolved promise 1').then(res =>
-    console.log(res));
-console.log('Test End');
+// console.log('Test start');
+// setTimeout(() => console.log('0 sec timer'), 0);
+// Promise.resolve('Resolved promise 1').then(res =>
+//     console.log(res));
+// console.log('Test End');
 
 
-const lotteryPromise = new Promise(function (resolve, reject) {
-    console.log('Lottery draw is happening 🔮');
-    // setTimeout(function(){
-    //     if (Math.random() >= 0.5) {
-    //         resolve('you WIN 💰')
-    //     } else {
-    //         reject(new Error('You lost your money 💸'));
-    //     }
-    // }, 2000);
-    resolve('you WIN 💰')
-});
+// const lotteryPromise = new Promise(function (resolve, reject) {
+//     console.log('Lottery draw is happening 🔮');
+//     // setTimeout(function(){
+//     //     if (Math.random() >= 0.5) {
+//     //         resolve('you WIN 💰')
+//     //     } else {
+//     //         reject(new Error('You lost your money 💸'));
+//     //     }
+//     // }, 2000);
+//     resolve('you WIN 💰')
+// });
 
-console.log('mpp')
-lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+// console.log('mpp')
+// lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
 
-//promisifying setTimeout
-const wait = function(seconds) {
-    return new Promise(function(resolve) {
-        setTimeout(resolve, seconds * 1000);
-    });
-};
+// //promisifying setTimeout
+// const wait = function (seconds) {
+//     return new Promise(function (resolve) {
+//         setTimeout(resolve, seconds * 1000);
+//     });
+// };
 
-wait(2).then(() => {
-    console.log('I waited for 2 seconds');
-    return wait(1);
-}).then(() => console.log('I waited for 1 second'));
+// wait(2).then(() => {
+//     console.log('I waited for 2 seconds');
+//     return wait(1);
+// }).then(() => console.log('I waited for 1 second'));
+
+
+
+
+// const getPosition = function () {
+//     return new Promise(function (resolve, reject) {
+//         // navigator.geolocation.getCurrentPosition(
+//         //     position => resolve(position), 
+//         //     err => console.err(err)
+//         // );
+//         navigator.geolocation.getCurrentPosition(resolve, reject);
+//     })
+// }
+
+// getPosition().then(pos => console.log(pos));
+
+// function whereAmI(lat, lng) {
+
+//     const whereAmI = function () {
+//         getPosition().then(pos => {
+//             const { latitude: lat, longitude: lng } = pos.coords;
+//         })
+//     }
+
+//     fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`).then(response => {
+//         return response.json()
+//     }).then(data => {
+//         console.log(data)
+//         if (!data.city || !data.countryName) {
+//             throw new Error('this country does not contain a city or countryName. Is this even a country??')
+//         }
+//         console.log(`You are in ${data.city}, ${data.countryName}`)
+//         console.log(data.countryName)
+//         getCountryData(data.countryName)
+//     }).catch(err => {
+//         console.error(`${err} 🥰`);
+//         renderError(`Something went wrong 🥰🥰 ${err.message}. Try again!`);
+//     })
+
+// }
+
+// btn.addEventListener('click', whereAmI);
+
+
+/* 
+Build the image loading functionality that I just showed you on the screen.
+
+Tasks are not super-descriptive this time, so that you can figure out some stuff on your own. Pretend you're working on your own 😉
+
+PART 1
+1. Create a function 'createImage' which receives imgPath as an input. This function returns a promise which creates a new image (use document.createElement('img')) and sets the .src attribute to the provided image path. When the image is done loading, append it to the DOM element with the 'images' class, and resolve the promise. The fulfilled value should be the image element itself. In case there is an error loading the image ('error' event), reject the promise.
+
+If this part is too tricky for you, just watch the first part of the solution.
+
+PART 2
+2. Comsume the promise using .then and also add an error handler;
+3. After the image has loaded, pause execution for 2 seconds using the wait function we created earlier;
+4. After the 2 seconds have passed, hide the current image (set display to 'none'), and load a second image (HINT: Use the image element returned by the createImage promise to hide the current image. You will need a global variable for that 😉);
+5. After the second image has loaded, pause execution for 2 seconds again;
+6. After the 2 seconds have passed, hide the current image.
+
+TEST DATA: Images in the img folder. Test the error handler by passing a wrong image path. Set the network speed to 'Fast 3G' in the dev tools Network tab, otherwise images load too fast.
+
+GOOD LUCK 😀
+*/
+
+
+// function createImage(imgPath) {
+//     return new Promise(function (resolve, reject) {
+//         let picture = document.createElement('img')
+//         picture.src = imgPath;
+//         let images = document.querySelector('.images')
+//         images.appendChild(picture);
+//         picture.addEventListener('load', function(){
+//             console.log('yay it worked')
+//             resolve(picture)
+//         })
+//         picture.addEventListener('error', function(){
+//             console.error('you did something wrong :(')
+//             reject(new Error('Image not found'));
+//         })
+
+
+//     });
+// }
+
+
+// createImage('./limg/img-3.jpg').then((img) => console.log(img)).catch(err=> console.log(err.message))
+// let currentImg;
+
+// createImage('img/img-1.jpg')
+//   .then( img => {
+//     currentImg = img;
+//     console.log('image 1 loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-2.jpg');
+//   })
+//   .then((img) => {
+//     currentImg = img
+//     console.log('image 2 loaded')
+//     return wait(2)
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//   })
+//   .catch(err => console.error(err));
+
+const getPosition = function () {
+    return new Promise(function (resolve, reject) {
+        console.log('s')
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+    })
+}
+
+
+const whereAmI = async function (country) {
+    try {
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    // // Reverse geocoding
+    const resGeo = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`)
+    const dataGeo = await resGeo.json();
+    console.log(dataGeo)
+
+    //Country data
+    // fetch(`https://restcountries.com/v3.1/name/${country}`).then(res => console.log(res))
+    //Geolocation
+    const res = await fetch(`https://restcountries.com/v3.1/name/${dataGeo.countryCode}`);
+    if(!res.ok) throw new Error('Problem getting location data')
+
+    const data = await res.json()
+    renderCountry(data[0]) 
+
+    return `You are in ${dataGeo.city}, ${dataGeo.countryCode}`;
+    } catch(err){
+        console.error(err);
+        renderError(`${err.message}`)
+
+        //Reject promise returned from async function
+        throw err;
+    }
+
+}
+
+console.log(`1: Will get location`);
+
+// const city = whereAmI()
+// console.log(city)
+// whereAmI().then(city => console.log(`2: ${city}`)).catch(err => console.error(`2: ${err.message} 🥰`))
+// .finally(()=> console.log(`3: Finished getting location`) )
+
+
+(async function(){
+try{
+const myLocation = await whereAmI()
+console.log(`2: ${myLocation}`)
+}
+catch(err){
+    console.error(`2: ${err.message} 🥰`)
+}
+console.log(`3: Finished getting location`)
+})();
+
+// try{
+// let y = 1;
+// const x = 2;
+// x = 3;
+// } catch (err) {
+//     alert(err);
+// }
