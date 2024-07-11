@@ -70,14 +70,14 @@ const renderError = function (msg) {
 // const request = fetch('https://restcountries.com/v3.1/name/portugal')
 // console.log(request);
 
-// const getJSON = function (url, errorMsg = 'Something went wrong') {
-//     return fetch(url).then(response => {
-//         if (!response.ok)
-//             throw new Error(`Country not found (${response.status})`);
-//         console.log(response)
-//         return response.json()
-//     })
-// }
+const getJSON = function (url, errorMsg = 'Something went wrong') {
+    return fetch(url).then(response => {
+        if (!response.ok)
+            throw new Error(`Country not found (${response.status})`);
+        console.log(response)
+        return response.json()
+    })
+}
 
 // const getCountryData = function (country) {
 //     //country 1
@@ -188,11 +188,11 @@ GOOD LUCK 😀
 // lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
 
 // //promisifying setTimeout
-// const wait = function (seconds) {
-//     return new Promise(function (resolve) {
-//         setTimeout(resolve, seconds * 1000);
-//     });
-// };
+const wait = function (seconds) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, seconds * 1000);
+    });
+};
 
 // wait(2).then(() => {
 //     console.log('I waited for 2 seconds');
@@ -354,16 +354,16 @@ console.log(`1: Will get location`);
 // .finally(()=> console.log(`3: Finished getting location`) )
 
 
-(async function(){
-try{
-const myLocation = await whereAmI()
-console.log(`2: ${myLocation}`)
-}
-catch(err){
-    console.error(`2: ${err.message} 🥰`)
-}
-console.log(`3: Finished getting location`)
-})();
+// (async function(){
+// try{
+// const myLocation = await whereAmI()
+// console.log(`2: ${myLocation}`)
+// }
+// catch(err){
+//     console.error(`2: ${err.message} 🥰`)
+// }
+// console.log(`3: Finished getting location`)
+// })();
 
 // try{
 // let y = 1;
@@ -372,3 +372,166 @@ console.log(`3: Finished getting location`)
 // } catch (err) {
 //     alert(err);
 // }
+
+const get3Countries = async function(c1, c2, c3){
+    try{
+       
+
+        const data = await Promise.all([getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+         getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+        getJSON(`https://restcountries.com/v3.1/name/${c3}`)
+    ])
+        console.log(data.map(d => d[0].capital));
+
+    }catch(err){
+        console.error(err);
+    }
+}
+
+get3Countries('portugal','canada','tanzania');
+
+//Promise.race
+(async function(){
+    const res = await Promise.race([getJSON(`https://restcountries.com/v3.1/name/italy`),
+    getJSON(`https://restcountries.com/v3.1/name/egypt`),
+    getJSON(`https://restcountries.com/v3.1/name/mexico`)])
+    console.log(res[0]);
+})();
+
+const timeout = function(sec){
+    return new Promise(function(_, reject){
+        setTimeout(function(){
+            reject(new Error('Request took too long!'))
+        }, sec * 1000)
+    })
+};
+
+Promise.race([
+    getJSON(`https://restcountries.com/v3.1/name/tanzania`),
+    timeout(1),
+])
+    .then(res => console.log(res[0]))
+    .catch(err => console.error(err));
+
+// Promise.allSettled
+Promise.allSettled([
+    Promise.resolve('Success'),
+    Promise.reject('Error'),
+    Promise.resolve('Another Success'),
+]).then(res => console.log(res))
+
+//Promise.any [ES2021]
+Promise.any([
+    Promise.resolve('Success'),
+    Promise.reject('ERROR'),
+    Promise.resolve('Another success')
+])
+.then(res => console.log(res))
+.catch(err=> console.error(err));
+
+
+/* 
+PART 1
+Write an async function 'loadNPause' that recreates Coding Challenge #2, this time using async/await (only the part where the promise is consumed). Compare the two versions, think about the big differences, and see which one you like more.
+Don't forget to test the error handler, and to set the network speed to 'Fast 3G' in the dev tools Network tab.
+
+PART 2
+1. Create an async function 'loadAll' that receives an array of image paths 'imgArr';
+2. Use .map to loop over the array, to load all the images with the 'createImage' function (call the resulting array 'imgs')
+3. Check out the 'imgs' array in the console! Is it like you expected?
+4. Use a promise combinator function to actually get the images from the array 😉
+5. Add the 'paralell' class to all the images (it has some CSS styles).
+
+TEST DATA: ['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']. To test, turn off the 'loadNPause' function.
+
+GOOD LUCK 😀
+*/
+
+ function CreateImage(imgPath){
+    return new Promise(function (resolve, reject) {
+        let picture = document.createElement('img')
+        picture.src = imgPath;
+        let images = document.querySelector('.images')
+        images.appendChild(picture);
+        picture.addEventListener('load', function(){
+            console.log('yay it worked')
+            resolve(picture)
+        })
+        picture.addEventListener('error', function(){
+            console.error('you did something wrong :(')
+             reject(new Error('Image not found'));
+        })
+    });
+}
+
+(async function loadNPause(){
+    try{
+    const res = await CreateImage('img/img-1.jpg')
+    console.log(res)
+    console.log('image 1 loaded')
+    await wait(2);
+    res.style.display = 'none';
+    const res2 = await CreateImage('img/img-2.jpg');
+    console.log('image 2 loaded')
+    await wait(2)
+    res2.style.display = 'none';
+    } catch(err) {
+        console.error(err)
+    }
+})()
+
+async function loadAll(imgArr){
+    const imgs = await Promise.all(imgArr.map((img) =>
+        CreateImage(img)
+    ))
+    console.log(imgs)
+    for (let i = 0; i < imgs.length; i++){
+        imgs[i].classList.add("parallel")
+    }
+
+}
+
+loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg'])
+
+// function createImage(imgPath) {
+//     return new Promise(function (resolve, reject) {
+//         let picture = document.createElement('img')
+//         picture.src = imgPath;
+//         let images = document.querySelector('.images')
+//         images.appendChild(picture);
+//         picture.addEventListener('load', function(){
+//             console.log('yay it worked')
+//             resolve(picture)
+//         })
+//         picture.addEventListener('error', function(){
+//             console.error('you did something wrong :(')
+//             reject(new Error('Image not found'));
+//         })
+
+
+//     });
+// }
+
+
+// createImage('./limg/img-3.jpg').then((img) => console.log(img)).catch(err=> console.log(err.message))
+// let currentImg;
+
+// createImage('img/img-1.jpg')
+//   .then( img => {
+//     currentImg = img;
+//     console.log('image 1 loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-2.jpg');
+//   })
+//   .then((img) => {
+//     currentImg = img
+//     console.log('image 2 loaded')
+//     return wait(2)
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//   })
+//   .catch(err => console.error(err));
