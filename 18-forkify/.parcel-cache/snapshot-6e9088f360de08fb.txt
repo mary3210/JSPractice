@@ -1,4 +1,4 @@
-10757
+10759
 139C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\svgo\lib\svgo\css-select-adapter.js133658039967860041 0
 130C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\full\math\isubh.js133658962450829916 0
 122C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\.package-lock.json133661460833801758 0
@@ -79,7 +79,7 @@
 150C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\caniuse-lite\data\features\addeventlistener.js133658039970109375 0
 110C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\srcset133658039967207746 1
 151C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\resolver-default\lib\DefaultResolver.js133658039968590989 0
-95C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist133661478132305859 1
+95C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist133662519506440795 1
 134C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\semver\functions\prerelease.js133658039973079306 0
 135C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\css-tree\lib\tokenizer\utils.js133658039971638589 0
 138C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\packager-js\lib\helpers.js133658039968842364 0
@@ -108,7 +108,7 @@
 146C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\modules\es.object.define-getter.js133658962446070381 0
 130C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\htmlnano\docs\netlify.toml133658039969199632 0
 145C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@swc\helpers\esm\_class_name_tdz_error.js133658039969290035 0
-119C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\controller.js133661402040756487 0
+119C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\controller.js133662518213036696 0
 135C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\caniuse-lite\data\regions\UY.js133658039981499952 0
 139C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\caniuse-lite\data\features\http2.js133658039978049866 0
 138C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\css-what\lib\commonjs\stringify.js133658039966058320 0
@@ -197,7 +197,7 @@
 128C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\to-regex-range\README.md133658039969158564 0
 151C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\modules\esnext.string.at-alternative.js133658962447436641 0
 168C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\dist\csstree.js133658039974727738 0
-105C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js133661329814579953 1
+105C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js133661591699633621 1
 107C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\sass133378208312824958 1
 120C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\csso\lib\replace133658039968220306 1
 119C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\srcset\index.js133658039967132684 0
@@ -278,19 +278,19 @@
 136C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\es\instance\ends-with.js133658962445436320 0
 157C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\csso\node_modules\css-tree\lib\generator\sourceMap.js133658039977110560 0
 125C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\msgpackr\benchmark.md133658039974059472 0
-114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\model.js133661346923196518 0
+114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\model.js133662519506164897 0
 152C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\core\lib\config\files\module-types.js.map133661460831730038 0
 125C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\msgpackr\unpack.d.cts133658039971829551 0
 126C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\immutable\package.json133658039966746265 0
 113C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\final\src\js\config.js133378208308422510 0
-111C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\views133661330292161826 1
+111C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\views133661588159260863 1
 153C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\caniuse-lite\data\features\css-filter-function.js133658039975491376 0
 113C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@trysound133658039964222912 1
 151C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\highlight\node_modules\has-flag\index.js133658039972763297 0
 175C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\convertor\index.js133658039975238434 0
 129C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\domhandler\lib\index.d.ts133658039967032158 0
 133C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\transformer-image\src133658039968210310 1
-125C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\views\recipeView.js133661478131957006 0
+125C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\views\recipeView.js133662518946642834 0
 135C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\codeframe\test\fixtures133658039971398417 1
 136C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\type-fest\source\promisable.d.ts133658039967950301 0
 136C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\regenerator-runtime\package.json133658962443579660 0
@@ -2109,7 +2109,7 @@
 150C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\csso\node_modules\css-tree\cjs\lexer\Lexer.cjs133658039974913019 0
 136C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\stable\symbol\key-for.js133658962451135115 0
 132C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\posthtml-render\package.json133658039967484349 0
-117C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.ec33bf00.js.map133661478132305859 0
+117C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.ec33bf00.js.map133662519506430796 0
 182C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\pseudo-selectors\index.d.ts133658039974571957 0
 161C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest6.c133658039974727738 0
 129C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\posthtml-render\readme.md133658039967524398 0
@@ -5599,7 +5599,7 @@
 152C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\types\lib\utils\deprecationWarning.js.map133661460832888960 0
 143C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\proposals\collection-of-from.js133658962444670552 0
 156C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\proposals\data-view-get-set-uint8-clamped.js133658962445045998 0
-114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\icons.4c95ab8c.svg133661458296692008 0
+114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\icons.4c95ab8c.svg133662515812161657 0
 146C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\proposals\decorator-metadata-v2.js133658962445056003 0
 143C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\proposals\decorator-metadata.js133658962445056003 0
 133C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\full\string\dedent.js133658962445065997 0
@@ -7337,7 +7337,7 @@
 140C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\features\instance\un-this.js133658962455157943 0
 140C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\utils\test\sourcemap.test.js133658039974727738 0
 142C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\features\instance\unique-by.js133658962455197943 0
-116C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\favicon.dd29872e.png133661458296391557 0
+116C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\favicon.dd29872e.png133662515812232851 0
 139C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\features\instance\values.js133658962455368115 0
 135C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\caniuse-lite\data\regions\SN.js133658039980689627 0
 137C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\core-js\features\instance\with.js133658962455663404 0
@@ -9738,7 +9738,7 @@
 156C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib133658039975288957 1
 142C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\highlight\node_modules\has-flag133658039972828370 1
 166C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\convertor133658039975238434 1
-114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\icons.35d27858.svg133661458296626892 0
+114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\icons.35d27858.svg133662515812161657 0
 174C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\definition-syntax133658039976270772 1
 166C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\generator133658039976060550 1
 165C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\index.js133658039975298950 0
@@ -9861,7 +9861,7 @@
 157C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\.bin\svgo.ps1133658039985843601 0
 155C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\lib\HTMLNanoOptimizer.js133658039968997844 0
 149C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-htmlnano\lib\svgMappings.js133658039969017845 0
-113C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.ec33bf00.js133661478132285872 0
+113C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.ec33bf00.js133662519506420780 0
 117C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\final\src\js\views\View.js133378208309082511 0
 129C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-css\lib133658039969279628 1
 129C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@parcel\optimizer-css\src133658039969300068 1
@@ -10545,7 +10545,7 @@
 139C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\helper-string-parser\LICENSE133661460830069259 0
 141C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\helper-string-parser\README.md133661460830099255 0
 144C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\helper-string-parser\lib\index.js133661460830149247 0
-113C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\logo.8da20c6b.png133661458296461767 0
+113C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\logo.8da20c6b.png133662515812172851 0
 148C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\helper-string-parser\lib\index.js.map133661460830210061 0
 146C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\helper-split-export-declaration\lib133661460830180061 1
 150C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\node_modules\@babel\helper-split-export-declaration\LICENSE133661460830057925 0
@@ -10752,7 +10752,9 @@
 123C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\final\src\js\views\searchView.js133378208310112510 0
 114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\final\src\img\icons.svg133378208308192510 0
 113C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\final\src\img\logo.png133378208308272525 0
-114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.07365aa8.css133661458296266385 0
 123C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.07365aa8.css.75284.19133658972863396994 0
-118C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.07365aa8.css.map133661458296296435 0
-106C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.html133661458296371512 0
+115C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\config.js133662420446014172 0
+106C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.html133661583125382598 0
+116C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\starter\src\js\helpers.js133662442137650321 0
+114C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.07365aa8.css133662515812182851 0
+118C:\Users\Mary\codestuff\udemyjavascriptcourse\complete-javascript-course-master\18-forkify\dist\index.07365aa8.css.map133662515812202850 0
